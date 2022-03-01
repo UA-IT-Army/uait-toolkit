@@ -8,11 +8,16 @@ toolbox container includes:
 
 # Use
 
-Build and login into container shell:
+(Optional) Build container:
 
 ```shell
-docker build -t toolkit -f containers/Dockerfile.toolkit .
-docker run --rm --it toolkit
+docker build -t droopy4096/uait-tools -f containers/Dockerfile.toolkit .
+```
+
+Login into container shell:
+
+```shell
+docker run --rm -it droopy4096/uait-tools
 root@bda7c51682fb:/opt# 
 ```
 
