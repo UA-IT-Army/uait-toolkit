@@ -17,6 +17,7 @@ RUN git clone https://github.com/Hrishikesh7665/D-Dos_Attack_Script.git
 RUN git clone https://github.com/palahsu/DDoS-Ripper.git
 # RUN git clone https://github.com/db1000n-coordinators/db1000n.git
 RUN mkdir disbalancer \
+    && cd disbalancer \
     && wget https://github.com/disbalancer-project/main/releases/download/v0.0.4/launcher-disbalancer-go-client-linux-amd64 \
     && touch proxies.txt \
     && chmod +x launcher-disbalancer-go-client-linux-amd64
