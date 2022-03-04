@@ -6,8 +6,10 @@
 
     ```shell
     docker pull droopy4096/uait-tools:latest
-    docker run -it --rm 
+    docker run --network=host -it --rm droopy4096/uait-tools:latest
     ```
+
+    Note: we're running docker with `host` mode as there are sizeable [performance gains](https://jtway.co/docker-network-performance-b95bce32b4b9)
 
 3. start the attack using one of the:
 
