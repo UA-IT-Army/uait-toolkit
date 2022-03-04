@@ -4,7 +4,9 @@ FROM ubuntu AS build
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get -y update 
 RUN apt-get install -y git python2 python3 php python3-pip wget
-RUN update-alternatives --install /usr/bin/python python /usr/bin/python3 90
+RUN update-alternatives --install /usr/bin/python python /usr/bin/python3 25
+RUN update-alternatives --install /usr/bin/python python /usr/bin/python2 90
+RUN update-alternatives --auto python
 RUN mkdir -p /opt
 
 WORKDIR /opt
@@ -28,8 +30,10 @@ COPY --from=db1000n /usr/src/app /usr/src/app
 
 WORKDIR /opt
 RUN apt-get -y update && apt-get install -y git python2 python3 php python3-pip \
-    && update-alternatives --install /usr/bin/python python /usr/bin/python3 90 \
-    && cd /opt/DarkFly-Tool \
+    && update-alternatives --install /usr/bin/python python /usr/bin/python3 25 \
+    && update-alternatives --install /usr/bin/python python /usr/bin/python2 90 \
+    && update-alternatives --auto python \
+    && cd /opt/DarkFly-Tool && python install.py \
     && cd /opt/DDos-Attack-OVH- && pip3 install -r requirements.txt \
     && cd /opt/LimerBoy-Impulse && pip3 install -r requirements.txt \
     && cd /opt/D-Dos_Attack_Script && pip3 install -r requirements.txt

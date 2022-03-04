@@ -19,8 +19,6 @@ Collected here are most tools that need to be utilized in cyber-warfare against 
    * [DarkFly](https://github.com/Ranginang67/DarkFly-Tool)
 
      ```shell
-     cd /opt/DarkFly-Tool
-     python2 install.py
      DarkFly
      ```
    * [DDos-Attack-OVH-](https://github.com/HardyTomas/DDos-Attack-OVH-)
