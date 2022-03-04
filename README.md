@@ -8,6 +8,9 @@ toolbox container includes:
 
 # Use
 
+
+[more detailed documentation](containers/README.md)
+
 (Optional) Build container:
 
 ```shell
