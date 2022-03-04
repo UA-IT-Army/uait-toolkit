@@ -21,7 +21,10 @@ Collected here are most tools that need to be utilized in cyber-warfare against 
      ```shell
      DarkFly
      ```
+
    * [DDos-Attack-OVH-](https://github.com/HardyTomas/DDos-Attack-OVH-)
+
+     below is the sample, replace `...` with actual parameters:
 
      ```shell
      cd /opt/DDos-Attack-OVH-
@@ -29,6 +32,8 @@ Collected here are most tools that need to be utilized in cyber-warfare against 
      ```
 
    * [Limer-Boy-Impulse](https://github.com/LimerBoy/Impulse)
+
+     below is the sample, replace `...` with actual parameters:
 
      ```shell
      cd /opt/LimerBoy-Impulse
