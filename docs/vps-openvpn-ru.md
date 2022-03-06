@@ -12,7 +12,7 @@ VPN меняет маршруты, и как только это происхо�
 Подготовим систему:
 
 ```shell
-tools/vps_openvpn_client.sh 
+sudo bash tools/vps_openvpn_client.sh 
 ```
 
 это подготовит iptables и маршруты для SSH соединений.
@@ -20,5 +20,5 @@ tools/vps_openvpn_client.sh
 Для начала скачайте `.ovpn` файл от VPN провайдера. Сохраняем файл в `client.ovpn`
 
 ```shell
-sudo sh tools/bg_openvpn.sh client.ovpn
+sudo bash tools/bg_openvpn.sh client.ovpn
 ```
